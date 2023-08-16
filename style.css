@@ -892,6 +892,13 @@ a {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+
+    color: #6A7687;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
 }
 
 

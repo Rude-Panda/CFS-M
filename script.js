@@ -24,7 +24,7 @@ function showNextCard() {
 showNextCard();
 
 
-// direct dial
+// DIRECT DIAL
 const callButton1 = document.getElementById("contact-us-button");
 const callButton2 = document.getElementById("contact-us-button-1");
 const callButton3 = document.getElementById("content-frame-button-call-id");
@@ -42,3 +42,21 @@ callButton3.addEventListener("click", function() {
     window.location.href = `tel:${phoneNumber}`;
 });
 
+// POPUP
+const popupTriggers = document.querySelectorAll('.element');
+const popupOverlay = document.getElementById('popup-overlay-id');
+const popupContent = document.getElementById('contact-popup-container-id');
+
+popupTriggers.forEach((trigger) => {
+  trigger.addEventListener('click', () => {
+    popupOverlay.classList.add('show');
+    popupContent.classList.add('show');
+  });
+});
+
+popupOverlay.addEventListener('click', (event) => {
+  if (event.target === popupOverlay) {
+    popupOverlay.classList.remove('show');
+    popupContent.classList.remove('show');
+  }
+});
